@@ -6,11 +6,11 @@ router.route('/apollo').get(async (req, res) => {
     method: 'GET',
     url: 'https://images-api.nasa.gov/search?q=apollo%2011&description=moon%20landing&media_type=image'
   });
-  if (response.stats !== 200) {
+  if (response.status !== 200) {
     res.json('Unable to fetch NASA data.');
     return;
   }
-  res.json(response.data);
+  res.json(response.data.collection.items);
 });
 
 module.exports = router;

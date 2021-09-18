@@ -18,7 +18,7 @@ export default function App() {
       console.log(response.data);
       return;
     }
-    setData(response.data.collection.items);
+    setData(response.data);
     setLoading(false);
   };
 
