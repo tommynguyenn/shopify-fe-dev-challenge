@@ -1,0 +1,19 @@
+.df {
+    display: flex !important;
+}
+
+.fdc {
+    flex-direction: column !important;
+}
+
+.jcsb {
+    justify-content: space-between !important;
+}
+
+.jcc {
+    justify-content: center !important;
+}
+
+.b {
+    font-weight: bold !important;
+}

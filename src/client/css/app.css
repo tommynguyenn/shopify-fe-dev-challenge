@@ -1,0 +1,116 @@
+@import url('./shorthand.css');
+
+body {
+  margin: auto;
+  background-color: rgb(248, 249, 250);
+}
+
+/* Base overrides */
+.MuiTypography-root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Topbar */
+.MuiAppBar-colorPrimary {
+  background-color: rgba(246, 246, 247, 1) !important;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.15) !important;
+}
+
+.header-text {
+  width: fit-content;
+  text-align: left;
+  padding: 10px 0px;
+}
+
+.MuiTypography-h1 {
+  font-size: 1.2em !important;
+  color: #000000 !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 0.8em !important;
+  color: grey;
+}
+
+/* Skeleton */
+.MuiSkeleton-root {
+  width: 24% !important;
+  height: 300px !important;
+  margin-top: 1%;
+}
+
+/* Main content */
+.content {
+  padding-top: 80px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+/* Photo card container */
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+/* Photo cards */
+.photo-card {
+  width: 24%;
+  margin-top: 1%;
+}
+
+.photo-card__content {
+  text-align: left;
+}
+
+.photo-card__content__title {
+  color: #000000 !important;
+}
+
+.MuiCardActions-root {
+  padding: 16px !important;
+}
+
+.photo-card__like-button {
+  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.15);
+  text-transform: capitalize !important;
+}
+
+.MuiCardMedia-img {
+  height: 200px;
+}
+
+/* Media queries for responsive sizing */
+@media screen and (max-width: 1100px) {
+  .photo-card, .MuiSkeleton-root {
+    width: 32% !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .photo-card, .MuiSkeleton-root {
+    width: 49% !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    padding-top: 60px;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .gallery {
+    padding: 10px;
+  }
+
+  .photo-card, .MuiSkeleton-root {
+    width: 100% !important;
+    margin-top: 10px;
+  }
+  
+  .MuiCardMedia-img {
+    height: auto;
+  }
+}
