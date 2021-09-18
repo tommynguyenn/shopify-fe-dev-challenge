@@ -2,10 +2,11 @@ require('dotenv').config();
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 
-app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, '/dist')));
 app.use(cors());
 app.use(express.urlencoded({
   extended: true
