@@ -6,7 +6,6 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '/dist')));
 app.use(cors());
 app.use(express.urlencoded({
   extended: true
@@ -14,5 +13,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 app.use('/api/images', require('./api/images'));
+
+app.use('/', express.static(path.join(__dirname, '/dist')));
 
 app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}`));
