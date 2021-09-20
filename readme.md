@@ -1,6 +1,8 @@
 # Shopify Front End Developer Intern Challenge
 Tommy Nguyen's submission to Shopify's FE Developer Intern Challenge for Winter 2022.
 
+Hosted at https://shopify-fe-dev-challenge.herokuapp.com/
+
 ## Quick Start
 ```
 # Clone the repository
